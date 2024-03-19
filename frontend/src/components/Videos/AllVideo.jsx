@@ -7,7 +7,7 @@ const [videos, setVideos] = useState([]);
 
 useEffect(() => {
   const fetchVideos = async () => {
-    const response = await fetch("http://localhost:5000/api/videos");
+    const response = await fetch("https://viral-buzz-api.vercel.app/api/videos");
     const data = await response.json();
     setVideos(data);
   };
@@ -25,7 +25,7 @@ function funct(url) {
         {videos.map((video) => (
           <VideoCard
             key={video._id}
-            src={`http://localhost:5000/${funct(video.video)}`}
+            src={`https://viral-buzz-api.vercel.app/${funct(video.video)}`}
             title={video.title}
             date={video.date}
           />

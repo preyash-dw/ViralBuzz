@@ -6,7 +6,7 @@ const VideoPlayer = () => {
 
   useEffect(() => {
     const fetchVideos = async () => {
-      const response = await fetch("http://localhost:5000/api/videos");
+      const response = await fetch("https://viral-buzz-api.vercel.app/api/videos");
       const data = await response.json();
       setVideos(data);
     };

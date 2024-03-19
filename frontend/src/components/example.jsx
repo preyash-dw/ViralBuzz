@@ -9,7 +9,7 @@ function App() {
 
   async function fetchContents() {
     try {
-      const response = await fetch('http://localhost:5000/api/contents');
+      const response = await fetch('https://viral-buzz-api.vercel.app/api/contents');
       const data = await response.json();
       console.log(data);
       setContents(data);

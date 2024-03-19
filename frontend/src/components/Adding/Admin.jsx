@@ -49,6 +49,11 @@ const Admin = () => {
     formData.append("type", selectedPostType);
     formData.append("description", content);
     formData.append("category", category);
+    console.log(formData);
+    formData.forEach(item=>{
+      console.log(item)
+    })
+    
     try {
       const response = await axios.post("https://viral-buzz-api.vercel.app/api/upload", formData);
       setMessage("Done"); 

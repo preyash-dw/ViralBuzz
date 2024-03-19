@@ -24,6 +24,7 @@ const upload = multer({ storage: storage });
 
 router.post("/upload", upload.single("file"), async (req, res) => {
   const { title, type, description ,category } = req.body;
+  console.log(req.body);
 
   if (!req.file) {
     return res.status(400).json({ error: "No file uploaded." });
@@ -48,6 +49,7 @@ router.post("/upload", upload.single("file"), async (req, res) => {
     date: new Date(),
     exactTime: new Date().toLocaleTimeString(),
   });
+
 
   try {
     const savedContent = await newContent.save();
