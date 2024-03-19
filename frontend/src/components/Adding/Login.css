@@ -1,0 +1,73 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  margin: 5% auto;
+  background-color: #f8f9fa; /* Light grey background */
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #007bff; /* Blue text */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;
+}
+
+.label {
+  font-size: 1.1rem;
+  color: #007bff; /* Blue text */
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ced4da; /* Light grey border */
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.button:hover {
+  background-color: #0056b3; /* Darker blue background on hover */
+}
+
+.link {
+  font-size: 0.9rem;
+  color: #007bff; /* Blue text */
+  text-decoration: none;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.error {
+  font-size: 0.9rem;
+  color: red;
+  margin-bottom: 1rem;
+}

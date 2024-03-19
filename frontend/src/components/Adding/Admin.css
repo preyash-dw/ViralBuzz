@@ -1,0 +1,135 @@
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 10% auto;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa; /* Light grey background */
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.toggle-container span.selected {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  padding: 2%;
+  border-radius: 10px;
+  font-size: large;
+}
+
+.toggle-container span:not(.selected) {
+  cursor: pointer;
+  color: #007bff; /* Blue text */
+  transition: background-color 0.3s;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.post-form input[type="file"],
+.post-form input[type="text"],
+.post-form textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ced4da; /* Light grey border */
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.post-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.post-form button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.post-form button:hover {
+  background-color: #0056b3; /* Darker blue background on hover */
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.message {
+  animation: slideIn 0.5s ease-out forwards, fadeOut 0.5s 2s forwards;
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .admin-container {
+    padding: 1px;
+    width: 90%;
+    margin-top: 20%;
+  }
+
+  .toggle-container {
+    margin-bottom: 15px;
+  }
+
+  .post-form input[type="text"],
+  .post-form textarea {
+    margin-bottom: 15px;
+  }
+
+  .post-form button {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 479px) {
+  .admin-container {
+    padding: 1px;
+    width: 90%;
+    margin-top: 30%;
+  }
+
+  .toggle-container {
+    margin-bottom: 10px;
+  }
+
+  .post-form input[type="text"],
+  .post-form textarea {
+    margin-bottom: 10px;
+  }
+
+  .post-form button {
+    padding: 10px 10px;
+  }
+}
