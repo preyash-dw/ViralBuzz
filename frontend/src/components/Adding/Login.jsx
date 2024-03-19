@@ -27,7 +27,7 @@ function Login() {
     event.preventDefault();
     if (signIn) {
       try {
-        const response = await fetch('http://localhost:5000/auth/login', {
+        const response = await fetch('https://viral-buzz-api.vercel.app/auth/login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, password }),
@@ -50,7 +50,7 @@ function Login() {
         return;
       }
       try {
-        const response = await fetch('http://localhost:5000/auth/register', {
+        const response = await fetch('https://viral-buzz-api.vercel.app/auth/register', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, password }),

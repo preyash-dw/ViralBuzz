@@ -8,7 +8,7 @@ const News = () => {
   const [selectedCategory, setSelectedCategory] = useState("general");
 
   const fetchData = async () => {
-    let response = await axios.get(`http://localhost:5000/api/contents?category=${category}`);
+    let response = await axios.get(`https://viral-buzz-api.vercel.app/api/contents?category=${category}`);
     console.log(response.data);
     setArticles(response.data);
   }
@@ -59,7 +59,7 @@ const News = () => {
       <div className="articles-container">
         {articles.map((article, index) => (
           <div className="card" key={index}>
-            <img src={`http://localhost:5000/${funct(article.image)}`} alt="" />
+            <img src={`https://viral-buzz-api.vercel.app/${funct(article.image)}`} alt="" />
             <h3>{article.title}</h3>
             <p>{truncateDescription(article.description)}</p>
             <a href={article.url}>Read More</a>

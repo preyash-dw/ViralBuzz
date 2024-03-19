@@ -13,7 +13,7 @@ const handleClick=()=>{
 }
   return (
     <div className="video" onClick={handleClick}>
-      <iframe src={`http://localhost:5000/${funct(src.video)}?autoplay=0`} title="src.title" allowFullScreen />
+      <iframe src={`https://viral-buzz-api.vercel.app/${funct(src.video)}?autoplay=0`} title="src.title" allowFullScreen />
       <h3 onClick={handleClick}>{src.title}</h3>
     </div>
   );

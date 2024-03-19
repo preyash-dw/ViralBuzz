@@ -13,7 +13,7 @@ const Card = ({ post}) => {
 
 const handleClick = async () => {
   try {
-    await axios.put(`http://localhost:5000/api/content/${post._id}/view`);
+    await axios.put(`https://viral-buzz-api.vercel.app/api/content/${post._id}/view`);
     navigate("/blog", { state: { post: post } });
   } catch (error) {
     console.error('Error increasing view count', error);
@@ -21,7 +21,7 @@ const handleClick = async () => {
 };
   return (
     <div className="cards" onClick={handleClick}>
-      <img src={`http://localhost:5000/${funct(post.image)}`} alt={post.title}  onClick={handleClick}/>
+      <img src={`https://viral-buzz-api.vercel.app/${funct(post.image)}`} alt={post.title}  onClick={handleClick}/>
       <h4>{post.title}</h4>
     </div>
   );

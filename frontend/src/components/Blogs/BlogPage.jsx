@@ -42,11 +42,10 @@ function capital(str) {
           <p className="date">{capital(post.category)}</p>
           </div>
           {type === 'post' ? (
-            <img src={`http://localhost:5000/${funct(post.image)}`} alt="Blog post" className="image"/>
+            <img src={`https://viral-buzz-api.vercel.app/${funct(post.image)}`} alt="Blog post" className="image"/>
           ) : (
-            // <iframe src={`http://localhost:5000/${funct(post.video)}?autoplay=0`}  className="video"/>
             <video className="video" controls>
-          <source src={`http://localhost:5000/${funct(post.video)}?autoplay=0`} type="video/mp4" />
+          <source src={`https://viral-buzz-api.vercel.app/${funct(post.video)}?autoplay=0`} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
           )}

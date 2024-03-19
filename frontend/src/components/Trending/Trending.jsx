@@ -12,7 +12,7 @@ useEffect(() => {
 
 async function fetchContents() {
   try {
-    const response = await fetch('http://localhost:5000/api/contents/views');
+    const response = await fetch('https://viral-buzz-api.vercel.app/api/contents/views');
     const data = await response.json();
     console.log(data);
     setContents(data);
@@ -28,7 +28,7 @@ const [videos, setVideos] = useState([]);
 
   useEffect(() => {
     const fetchVideos = async () => {
-      const response = await fetch("http://localhost:5000/api/videos/views");
+      const response = await fetch("https://viral-buzz-api.vercel.app/api/videos/views");
       const data = await response.json();
       setVideos(data);
     };
