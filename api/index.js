@@ -2,7 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import contentRoute from './routes/testRouting.js';
+import contentRoute from './routes/routing.js';
 import userRoute from "./routes/userRoutes.js"
 dotenv.config();
 
