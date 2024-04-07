@@ -21,7 +21,7 @@ const handleClick = async () => {
 };
   return (
     <div className="cards" onClick={handleClick}>
-      <img src={`https://viral-buzz-api.vercel.app/${funct(post.image)}`} alt={post.title}  onClick={handleClick}/>
+      <img src={(post.image)} alt={post.title}  onClick={handleClick}/>
       <h4>{post.title}</h4>
     </div>
   );
