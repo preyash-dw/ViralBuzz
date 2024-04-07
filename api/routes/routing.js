@@ -32,7 +32,7 @@ router.post("/upload", upload.single("file"), async (req, res) => {
   
   console.log(req.file);
   const params = {
-    Bucket: viralbuzz-app,
+    Bucket: 'viralbuzz-app',
     Key: `${Date.now()}-${req.file.originalname}`,
     Body: req.file.buffer
   };
