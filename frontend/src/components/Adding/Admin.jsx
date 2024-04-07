@@ -51,7 +51,7 @@ const Admin = () => {
     formData.append("category", category);
     
     try {
-      const response = await axios.post("http://localhost:5000/api/upload", formData);
+      const response = await axios.post("https://viral-buzz-api.vercel.app/api/upload", formData);
       setMessage("Done"); 
       setImage(null); 
       setHeading(""); 
