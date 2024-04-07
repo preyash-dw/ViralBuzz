@@ -24,6 +24,7 @@ const upload = multer({
 
 router.post("/upload", upload.single("file"), async (req, res) => {
   const { title, type, description, category } = req.body;
+  console.log(req.body);
 
   if (!req.file) {
     return res.status(400).json({ error: "No file uploaded." });
@@ -31,7 +32,7 @@ router.post("/upload", upload.single("file"), async (req, res) => {
   
   console.log(req.file);
   const params = {
-    Bucket: process.env.BUCKET_NAME,
+    Bucket: viralbuzz-app,
     Key: `${Date.now()}-${req.file.originalname}`,
     Body: req.file.buffer
   };
